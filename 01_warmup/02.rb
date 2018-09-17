@@ -4,7 +4,8 @@
 patrol_car = "パトカー"
 taxi = "タクシー"
 
-output = ""
-(patrol_car + taxi).length.times do |i|
-  output << patrol_car[i]
+output = patrol_car.split("")
+taxi.length.times do |i|
+  output.insert(i * 2 + 1, taxi[i])
 end
+puts output.join("")
