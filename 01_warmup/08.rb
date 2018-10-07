@@ -5,3 +5,14 @@
 # その他の文字はそのまま出力
 # この関数を用い，英語のメッセージを暗号化・復号化せよ．
 
+def cipher(message)
+  message.gsub(/[[:alpha:]&&[:lower:]]+/) do |w|
+    w.codepoints.map { |n| (219 - n).chr(Encoding::UTF_8) }.join
+  end
+end
+
+sentence = 'Hi, My name is John. I\'m a software engineer for 10 years.'
+ciphered = cipher(sentence)
+desiphered = cipher(ciphered)
+puts "ciphered: #{ciphered}"
+puts "deciphered: #{desiphered}"
