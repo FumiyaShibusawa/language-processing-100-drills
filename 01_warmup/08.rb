@@ -13,6 +13,7 @@ end
 
 sentence = 'Hi, My name is John. I\'m a software engineer for 10 years.'
 ciphered = cipher(sentence)
-desiphered = cipher(ciphered)
+deciphered = cipher(ciphered)
+
 puts "ciphered: #{ciphered}"
-puts "deciphered: #{desiphered}"
+puts "deciphered: #{deciphered}"
