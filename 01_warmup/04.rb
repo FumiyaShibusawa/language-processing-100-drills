@@ -8,7 +8,7 @@ sentence = "Hi He Lied Because Boron Could Not Oxidize Fluorine. New Nations \
 Might Also Sign Peace Security Clause. Arthur King Can."
 
 hash_list = {}
-sentence.split(/[\s|\.|,]/).reject(&:empty?).map.with_index(1) do |word, i|
+sentence.split(/\s|\.|,/).reject(&:empty?).map.with_index(1) do |word, i|
   if [1, 5, 6, 7, 8, 9, 15, 16, 19].include?(i)
     word = word.slice(0, 1)
   else

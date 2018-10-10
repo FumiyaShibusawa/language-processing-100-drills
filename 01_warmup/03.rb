@@ -3,4 +3,4 @@
 # という文を単語に分解し，各単語の（アルファベットの）文字数を先頭から出現順に並べたリストを作成せよ．
 
 sentence = "Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics."
-p sentence.split(/[\s|\.|,]/).reject(&:empty?).collect(&:length)
+p sentence.split(/\s|\.|,/).reject(&:empty?).collect(&:length)

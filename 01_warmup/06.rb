@@ -4,12 +4,12 @@
 
 # 'paraparaparadise' bi-gram
 x = []
-'paraparaparadise'.split('').each_cons(2) { |w| x << w.join('') }
+'paraparaparadise'.chars.each_cons(2) { |w| x << w.join('') }
 puts "X: #{x}"
 
 # 'paragraph' bi-gram
 y = []
-'paragraph'.split('').each_cons(2) { |w| y << w.join('') }
+'paragraph'.chars.each_cons(2) { |w| y << w.join('') }
 puts "Y: #{y}"
 
 # 和集合
