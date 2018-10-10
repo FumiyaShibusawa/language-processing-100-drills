@@ -11,7 +11,7 @@
 #
 def shuffle_letters_in(sentence)
   sentence.split.map do |word|
-    word[1..-2] = word[1..-2].split('').shuffle.join if word.length > 4
+    word[1..-2] = word[1..-2].chars.shuffle.join if word.length > 4
     word
   end.join(' ')
 end

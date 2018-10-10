@@ -27,7 +27,7 @@ end
 #
 def create_letter_n_gram(sentence, n_gram)
   letters = sentence.delete(' ')
-  letters.split('').each_cons(n_gram).with_object([]) do |letter, array|
+  letters.chars.each_cons(n_gram).with_object([]) do |letter, array|
     array << letter
   end
 end
